@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>alexander betaev</title>
@@ -9,22 +9,11 @@
 
 <body>
 
-  <main>
+  <header>
+    <h1>supremum of sanity is infinum of insanity</h1>
+  </header>
 
-    <header>
-      <h1>supremum of sanity is infinum of insanity</h1>
-    </header>
-
-    <nav>
-      <ul>
-        <li class="photo"><a href="https://www.instagram.com/alex.betaev/">my pictures</a></li>
-        <li class="music"><a href="https://bandcamp.com/abetaev">their music</a></li>
-      </ul>
-    </nav>
-
-    <footer></footer>
-
-  </main>
+  <footer></footer>
 
   <script type="module">
     import { h, Component, render } from 'https://unpkg.com/preact?module';
@@ -40,12 +29,29 @@
       const cnn = "torn fiesta";
       const dnn = [6, 3, 5, 7, 8, 9, 10, 0, 1, 2]
       const telegramId = dnn.map(n => cnn[n]).join('')
-      return html`
-        <a href="mailto:${email}">📧</a>
-        <a href="https://t.me/${telegramId}">
-          <img src="telegram.svg" class="inline"/>
-        </a>
-      `;
+
+      const contacts = [
+        {
+          "url": `mailto:${email}`,
+          "icon": "email.svg"
+        },
+        {
+          "url": `https://t.me/${telegramId}`,
+          "icon": "telegram.svg"
+        },
+        {
+          "url": "https://www.instagram.com/alex.betaev/",
+          "icon": "instagram.svg"
+        },
+        {
+          "url": "https://bandcamp.com/abetaev",
+          "icon": "bandcamp.svg"
+        }
+      ]
+
+      return html`${contacts.map(({ url, icon }) => html`<a class="contact" href="${url}">
+        <img class="inline" src="${icon}"/>
+      </a>`)}`;
     }
 
     render(html`<${Contacts} />`, footer);

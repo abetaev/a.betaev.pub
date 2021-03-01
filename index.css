@@ -8,15 +8,10 @@ body {
   bottom: 0px;
   padding: 0px;
   margin: 0px;
-}
-
-main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  width: 100%;
 }
 
 header {
@@ -38,7 +33,8 @@ img {
 
 img.inline {
   display: inline;
-  height: 1em;
+  height: 100%;
+  width: 100%
 }
 
 a, a:visited, a:hover {
@@ -54,6 +50,11 @@ a, a:visited, a:hover {
 
 a:visited  {
   background-color: gray;
+}
+
+a.contact {
+  width: 3em;
+  height: 3em;
 }
 
 a:hover {
