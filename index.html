@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>alexander betaev</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <main>
+
+    <header>
+      <h1>supremum of sanity is infinum of insanity</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li class="photo"><a href="https://www.instagram.com/alex.betaev/">my pictures</a></li>
+        <li class="music"><a href="https://bandcamp.com/abetaev">their music</a></li>
+      </ul>
+    </nav>
+
+    <footer></footer>
+
+  </main>
+
+  <script type="module">
+    import { h, Component, render } from 'https://unpkg.com/preact?module';
+    import htm from 'https://unpkg.com/htm?module';
+
+    const html = htm.bind(h);
+
+    const footer = document.getElementsByTagName("footer")[0]
+
+    const Contacts = () => {
+      const url = new URL(document.location);
+      const email = url.host.replace("\.", "@", 1)
+      const cnn = "torn fiesta";
+      const dnn = [6, 3, 5, 7, 8, 9, 10, 0, 1, 2]
+      const telegramId = dnn.map(n => cnn[n]).join('')
+      return html`
+        <a href="mailto:${email}">📧</a>
+        <a href="https://t.me/${telegramId}">
+          <img src="telegram.svg" class="inline"/>
+        </a>
+      `;
+    }
+
+    render(html`<${Contacts} />`, footer);
+  </script>
+
+</body>
+
+</html>

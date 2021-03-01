@@ -1,0 +1,75 @@
+body {
+  color: darkslategray;
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  margin: 0.5em;
+}
+
+footer {
+  margin: 0.5em;
+  display: flex;
+  justify-items: center;
+}
+
+img {
+  margin: 0px;
+  padding: 0px;
+  vertical-align: middle;
+}
+
+img.inline {
+  display: inline;
+  height: 1em;
+}
+
+a, a:visited, a:hover {
+  padding: 1px;
+  margin: 1px;
+  color: darkslategray;
+  border-style: solid;
+  border-color: darkcyan;
+  border-width: 1px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+a:visited  {
+  background-color: gray;
+}
+
+a:hover {
+  color: white;
+  background-color: darkslategray;
+}
+
+li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+li.music {
+  list-style-type: "🎶";
+}
+
+li.photo {
+  list-style-type: "📷";
+}
