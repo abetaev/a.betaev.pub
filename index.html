@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>alexander betaev</title>
+  <title>my stuff</title>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
@@ -15,6 +15,16 @@
     <h1>supremum of sanity is infinum of insanity</h1>
   </header>
 
+  <main>
+    <p><div class="float-right blured-edge" style="max-width: 50%"><img src="avatar.jpg" style="max-height: 11em"></div>
+    hi, my name is Alexander</p>
+    <p>nowdays humanity produces entropy with the speed of light;
+    minimalism is the tool to engineer an ordering solution.</p>
+    <p>quality comes out quantity, quantity turns into quality. everything starts from a loop. more stuff later</p>
+    <hr>
+    <p style="text-align: right;">alex</p>
+  </main>
+
   <footer></footer>
 
   <script type="module">
@@ -22,8 +32,6 @@
     import htm from 'https://unpkg.com/htm?module';
 
     const html = htm.bind(h);
-
-    const footer = document.getElementsByTagName("footer")[0]
 
     const Contacts = () => {
       const url = new URL(document.location);
@@ -52,10 +60,11 @@
       ]
 
       return html`${contacts.map(({ url, icon }) => html`<a class="contact" href="${url}" target="_blank">
-        <img class="inline" src="${icon}"/>
+        <img class="contact" src="${icon}"/>
       </a>`)}`;
     }
 
+    const footer = document.getElementsByTagName("footer")[0]
     render(html`<${Contacts} />`, footer);
   </script>
 
