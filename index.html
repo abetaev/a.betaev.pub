@@ -4,8 +4,7 @@
 <head>
   <title>my stuff</title>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <link rel="stylesheet" href="index.css">
 </head>
 
@@ -16,11 +15,11 @@
   </header>
 
   <main>
-    <p><div class="float-right blured-edge" style="max-width: 50%"><img src="avatar.jpg" style="max-height: 11em"></div>
-    hi, my name is Alexander</p>
+    <div class="float-right avatar" style="max-width: 50%"></div>
+    <p>hi, my name is Alexander</p>
     <p>nowdays humanity produces entropy with the speed of light;
     minimalism is the tool to engineer an ordering solution.</p>
-    <p>quality comes out quantity, quantity turns into quality. everything starts from a loop. more stuff later</p>
+    <p>quality comes out of quantity, quantity turns into quality. everything starts from a loop. more stuff later</p>
     <hr>
     <p style="text-align: right;">alex</p>
   </main>
@@ -43,24 +42,28 @@
       const contacts = [
         {
           "url": `mailto:${email}`,
-          "icon": "email.svg"
+          "icon": "email.svg",
+          "text": "email me"
         },
         {
           "url": `https://t.me/${telegramId}`,
-          "icon": "telegram.svg"
+          "icon": "telegram.svg",
+          "text": "message me"
         },
         {
           "url": "https://www.instagram.com/alex.betaev/",
-          "icon": "instagram.svg"
+          "icon": "instagram.svg",
+          "text": "my pictures"
         },
         {
           "url": "https://bandcamp.com/abetaev",
-          "icon": "bandcamp.svg"
+          "icon": "bandcamp.svg",
+          "text": "their music"
         }
       ]
 
-      return html`${contacts.map(({ url, icon }) => html`<a class="contact" href="${url}" target="_blank">
-        <img class="contact" src="${icon}"/>
+      return html`${contacts.map(({ url, icon, text }) => html`<a class="contact" href="${url}" target="_blank">
+        <img class="contact" src="${icon}" alt="${text}"/>
       </a>`)}`;
     }
 

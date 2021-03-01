@@ -20,7 +20,7 @@ header {
 }
 
 p {
-  text-align: start;
+  padding-right: 1em;
 }
 
 footer {
@@ -56,8 +56,9 @@ a, a:visited, a:hover {
   text-decoration: none;
 }
 
-a:visited  {
-  background-color: gray;
+a:hover {
+  color: white;
+  background-color: darkslategray;
 }
 
 a.contact {
@@ -65,20 +66,10 @@ a.contact {
   height: 3em;
 }
 
-a:hover {
-  color: white;
-  background-color: darkslategray;
-}
-
-li {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-li.music {
-  list-style-type: "🎶";
-}
-
-li.photo {
-  list-style-type: "📷";
+div.avatar {
+  background-image: url('avatar.jpg');
+  background-size: 100%;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 12px 6px #13140c inset;
 }
