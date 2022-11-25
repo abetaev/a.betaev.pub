@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>my stuff</title>
+  <title>supremum of sanity is infinum of insanity</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <link rel="stylesheet" href="index.css">
@@ -11,68 +11,14 @@
 <body>
 
   <header>
-    <h1>supremum of sanity is infinum of insanity</h1>
+    <h1>hi!</h1>
   </header>
 
   <main>
-    <div class="float-right avatar" style="max-width: 50%"></div>
-    <p>hi, my name is Alexander</p>
-    <p>nowdays humanity produces entropy with the speed of light;
-    minimalism is the tool to engineer an ordering solution.</p>
-    <p>quality comes out of quantity, quantity turns into quality. everything starts from a loop. more stuff later</p>
-    <hr>
-    <p style="text-align: right;">alex</p>
+    <p>you look for bullshit all over internet, here's none.</p>
   </main>
 
   <footer></footer>
-
-  <script type="module">
-    import { h, Component, render } from 'https://unpkg.com/preact?module';
-    import htm from 'https://unpkg.com/htm?module';
-
-    const html = htm.bind(h);
-
-    const Contacts = () => {
-      const url = new URL(document.location);
-      const email = url.host.replace("\.", "@", 1)
-      const cnn = "torn fiesta";
-      const dnn = [6, 3, 5, 7, 8, 9, 10, 0, 1, 2]
-      const telegramId = dnn.map(n => cnn[n]).join('')
-
-      const contacts = [
-        {
-          "url": `mailto:${email}`,
-          "icon": "email.svg",
-          "text": "email me"
-        },
-        {
-          "url": `https://t.me/${telegramId}`,
-          "icon": "telegram.svg",
-          "text": "message me"
-        },
-        {
-          "url": "https://www.instagram.com/alex.betaev/",
-          "icon": "instagram.svg",
-          "text": "my pictures"
-        },
-        {
-          "url": "https://bandcamp.com/abetaev",
-          "icon": "bandcamp.svg",
-          "text": "their music"
-        }
-      ]
-
-      return html`${contacts.map(({ url, icon, text }) => html`<a class="contact" href="${url}" target="_blank">
-        <img class="contact" src="${icon}" alt="${text}"/>
-      </a>`)}`;
-    }
-
-    const footer = document.getElementsByTagName("footer")[0]
-    render(html`<${Contacts} />`, footer);
-  </script>
-
-  <script data-goatcounter="https://abetaev.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
 
 </body>
 
