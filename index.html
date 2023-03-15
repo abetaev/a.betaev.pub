@@ -4,21 +4,47 @@
 <head>
   <title>supremum of sanity is infinum of insanity</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="index.css">
+
+  <style>
+    .icon,
+    .material-icons {
+      width: 96px;
+      height: 96px;
+      font-size: 96px;
+    }
+
+    li::marker {
+      content: none;
+    }
+  </style>
+
 </head>
 
-<body>
+<body class="container" data-theme="dark">
 
-  <header>
-    <h1>hi!</h1>
-  </header>
-
-  <main>
-    <p>you look for bullshit all over internet, here's none.</p>
-  </main>
-
-  <footer><a href="https://bro.betaev.pub/">💩</a></footer>
+  <dialog open>
+    <article>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://bandcamp.com/abetaev"><img class="icon" src="bandcamp.svg"></a>
+          </li>
+          <li>
+            <a href="https://cv.betaev.pub"><i class="material-icons">history_edu</i></a>
+          </li>
+          <li>
+            <a href="https://github.com/abetaev">
+              <img class="icon" src="github.svg">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </article>
+  </dialog>
 
 </body>
 
